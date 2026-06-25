@@ -4,6 +4,10 @@ export class Character {
 
   constructor(private readonly characterLevel = 1) {}
 
+  join(faction: string): void {
+    this.factions.add(faction);
+  }
+
   belongsTo(faction: string): boolean {
     return this.factions.has(faction);
   }

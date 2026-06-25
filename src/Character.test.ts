@@ -93,6 +93,14 @@ describe('Character', () => {
     expect(aCharacter().belongsTo('The Order')).toBe(false);
   });
 
+  it('joining a faction makes the character a member', () => {
+    const character = aCharacter();
+
+    character.join('The Order');
+
+    expect(character.belongsTo('The Order')).toBe(true);
+  });
+
   it('rejects healing a dead character', () => {
     const character = aDeadCharacter();
 
