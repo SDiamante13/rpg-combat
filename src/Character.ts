@@ -36,8 +36,15 @@ export class Character {
     if (target === this) {
       throw new Error('A character cannot damage itself');
     }
+    if (this.isAlliedWith(target)) {
+      throw new Error('Allies cannot damage each other');
+    }
     const applied = this.effectiveDamage(target, damage);
     target.currentHealth = Math.max(0, target.currentHealth - applied);
+  }
+
+  private isAlliedWith(other: Character): boolean {
+    return [...this.factions].some((faction) => other.belongsTo(faction));
   }
 
   private effectiveDamage(target: Character, damage: number): number {

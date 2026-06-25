@@ -38,6 +38,16 @@ describe('Character', () => {
     expect(character.health).toBe(1000);
   });
 
+  it('allies sharing a faction cannot damage each other', () => {
+    const attacker = aCharacter();
+    const target = aCharacter();
+    attacker.join('The Order');
+    target.join('The Order');
+
+    expect(() => attacker.dealDamage(target, 200)).toThrow('Allies cannot damage each other');
+    expect(target.health).toBe(1000);
+  });
+
   it('healing an alive character below max increases its health', () => {
     const character = aCharacterDamagedBy(100);
 
