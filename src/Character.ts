@@ -57,10 +57,10 @@ export class Character {
     return damage;
   }
 
-  heal(amount: number): void {
-    if (!this.isAlive) {
+  heal(amount: number, target: Character = this): void {
+    if (!target.isAlive) {
       throw new Error('A dead character cannot heal');
     }
-    this.currentHealth = Math.min(this.maxHealth, this.currentHealth + amount);
+    target.currentHealth = Math.min(target.maxHealth, target.currentHealth + amount);
   }
 }
