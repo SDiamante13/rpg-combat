@@ -6,8 +6,7 @@ import {
   aCharacterDamagedBy,
   aDeadCharacter,
 } from './character-builders.ts';
-import { HealingObject } from './HealingObject.ts';
-import { MagicalObject } from './MagicalObject.ts';
+import { aHealingObject, aMagicalObject } from './magical-object-builders.ts';
 
 describe('Character healing', () => {
   it('healing an alive character below max increases its health', () => {
@@ -62,7 +61,7 @@ describe('Character healing', () => {
 
   it('rejects healing a magical object', () => {
     const healer = aCharacter();
-    const magicalObject = new MagicalObject(500);
+    const magicalObject = aMagicalObject(500);
 
     expect(() => healer.heal(50, magicalObject)).toThrow('Cannot heal a magical object');
     expect(magicalObject.health).toBe(500);
@@ -70,7 +69,7 @@ describe('Character healing', () => {
 
   it("drawing from a healing object heals up to the object's remaining amount", () => {
     const character = aCharacterDamagedBy(600);
-    const healingObject = new HealingObject(500);
+    const healingObject = aHealingObject(500);
 
     character.drawFrom(healingObject);
 
