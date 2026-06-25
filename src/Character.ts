@@ -7,12 +7,17 @@ const HIGH_LEVEL = 6;
 const LEVEL_GAP_FOR_DAMAGE_MODIFIER = 5;
 const REDUCED_DAMAGE_FACTOR = 0.5;
 const INCREASED_DAMAGE_FACTOR = 1.5;
+const DAMAGE_TO_LEVEL_UP = 1000;
 
 export class Character implements Target {
   private currentHealth = BASE_MAX_HEALTH;
   private readonly factions = new Set<string>();
+  private currentLevel: number;
+  private damageBuffer = 0;
 
-  constructor(private readonly characterLevel = 1) {}
+  constructor(startingLevel = 1) {
+    this.currentLevel = startingLevel;
+  }
 
   join(faction: string): void {
     this.factions.add(faction);
@@ -31,7 +36,11 @@ export class Character implements Target {
   }
 
   get level(): number {
-    return this.characterLevel;
+    return this.currentLevel;
+  }
+
+  private gainLevel(): void {
+    this.currentLevel += 1;
   }
 
   private get maxHealth(): number {
@@ -55,6 +64,14 @@ export class Character implements Target {
 
   takeDamage(amount: number): void {
     this.currentHealth = Math.max(0, this.currentHealth - amount);
+    if (this.isAlive) this.recordSurvivedDamage(amount);
+  }
+
+  private recordSurvivedDamage(amount: number): void {
+    this.damageBuffer += amount;
+    if (this.damageBuffer < DAMAGE_TO_LEVEL_UP) return;
+    this.damageBuffer = 0;
+    this.gainLevel();
   }
 
   private isAlliedWith(other: Character): boolean {
