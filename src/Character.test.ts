@@ -2,7 +2,11 @@ import { describe, expect, it } from 'vitest';
 
 import { Character } from './Character.ts';
 
-function aCharacter(level = 1): Character {
+function aCharacter(): Character {
+  return new Character();
+}
+
+function aCharacterAtLevel(level: number): Character {
   return new Character(level);
 }
 
@@ -69,7 +73,7 @@ describe('Character', () => {
   });
 
   it('a level 6+ character can heal up to 1500 health', () => {
-    const character = aCharacter(6);
+    const character = aCharacterAtLevel(6);
 
     character.heal(600);
 
@@ -77,8 +81,8 @@ describe('Character', () => {
   });
 
   it('halves damage when the target is 5+ levels above the attacker', () => {
-    const attacker = aCharacter(1);
-    const target = aCharacter(6);
+    const attacker = aCharacterAtLevel(1);
+    const target = aCharacterAtLevel(6);
 
     attacker.dealDamage(target, 200);
 
