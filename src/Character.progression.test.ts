@@ -49,4 +49,17 @@ describe('Character progression', () => {
 
     expect(character.level).toBe(2);
   });
+
+  it('joining 3 more distinct factions grants another level', () => {
+    const character = aCharacter();
+
+    character.join('The Order');
+    character.join('The Shadows');
+    character.join('The Watch');
+    character.join('The Flame');
+    character.join('The Tide');
+    character.join('The Gale');
+
+    expect(character.level).toBe(3);
+  });
 });

@@ -29,7 +29,7 @@ export class Character implements Target {
   private recordFactionJoined(faction: string): void {
     if (this.factionsEverJoined.has(faction)) return;
     this.factionsEverJoined.add(faction);
-    if (this.factionsEverJoined.size === FACTIONS_FOR_LEVEL) this.gainLevel();
+    if (this.factionsEverJoined.size % FACTIONS_FOR_LEVEL === 0) this.gainLevel();
   }
 
   leave(faction: string): void {
