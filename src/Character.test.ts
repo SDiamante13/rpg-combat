@@ -101,6 +101,15 @@ describe('Character', () => {
     expect(character.belongsTo('The Order')).toBe(true);
   });
 
+  it('leaving a faction removes membership', () => {
+    const character = aCharacter();
+    character.join('The Order');
+
+    character.leave('The Order');
+
+    expect(character.belongsTo('The Order')).toBe(false);
+  });
+
   it('rejects healing a dead character', () => {
     const character = aDeadCharacter();
 

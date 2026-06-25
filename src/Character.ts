@@ -8,6 +8,10 @@ export class Character {
     this.factions.add(faction);
   }
 
+  leave(faction: string): void {
+    this.factions.delete(faction);
+  }
+
   belongsTo(faction: string): boolean {
     return this.factions.has(faction);
   }
