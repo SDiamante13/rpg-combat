@@ -52,6 +52,16 @@ describe('Character', () => {
     expect(character.health).toBe(950);
   });
 
+  it('healing cannot raise health above 1000', () => {
+    const attacker = new Character();
+    const character = new Character();
+    attacker.dealDamage(character, 100);
+
+    character.heal(500);
+
+    expect(character.health).toBe(1000);
+  });
+
   it('rejects healing a dead character', () => {
     const attacker = new Character();
     const character = new Character();

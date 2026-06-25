@@ -1,5 +1,7 @@
 export class Character {
-  private currentHealth: number = 1000;
+  private static readonly maxHealth = 1000;
+
+  private currentHealth: number = Character.maxHealth;
 
   get health(): number {
     return this.currentHealth;
@@ -24,6 +26,6 @@ export class Character {
     if (!this.isAlive) {
       throw new Error('A dead character cannot heal');
     }
-    this.currentHealth += amount;
+    this.currentHealth = Math.min(Character.maxHealth, this.currentHealth + amount);
   }
 }
