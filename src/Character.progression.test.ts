@@ -15,4 +15,15 @@ describe('Character progression', () => {
     expect(character.isAlive).toBe(true);
     expect(character.level).toBe(2);
   });
+
+  it('a lethal blow that crosses the level-up threshold grants no level', () => {
+    const character = aCharacter();
+    const attacker = aCharacter();
+
+    attacker.dealDamage(character, 500);
+    attacker.dealDamage(character, 500);
+
+    expect(character.isAlive).toBe(false);
+    expect(character.level).toBe(1);
+  });
 });
