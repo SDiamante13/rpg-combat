@@ -1,3 +1,4 @@
+import type { Character } from './Character.ts';
 import type { Target } from './Target.ts';
 
 export class MagicalObject implements Target {
@@ -25,5 +26,9 @@ export class MagicalObject implements Target {
 
   drawHealing(): number {
     throw new Error('This object cannot heal');
+  }
+
+  attack(_target: Character): void {
+    throw new Error('This object cannot deal damage');
   }
 }

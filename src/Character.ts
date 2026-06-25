@@ -64,6 +64,10 @@ export class Character implements Target {
     this.healCharacter(source.drawHealing(), this);
   }
 
+  attackWith(weapon: MagicalObject, target: Character): void {
+    weapon.attack(target);
+  }
+
   heal(amount: number, target: Target = this): void {
     if (!(target instanceof Character)) throw new Error('Cannot heal a magical object');
     this.healCharacter(amount, target);
