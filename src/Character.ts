@@ -9,6 +9,7 @@ const REDUCED_DAMAGE_FACTOR = 0.5;
 const INCREASED_DAMAGE_FACTOR = 1.5;
 const DAMAGE_PER_LEVEL = 1000;
 const FACTIONS_FOR_LEVEL = 3;
+const MAX_LEVEL = 10;
 
 export class Character implements Target {
   private currentHealth = BASE_MAX_HEALTH;
@@ -49,7 +50,7 @@ export class Character implements Target {
   }
 
   private gainLevel(): void {
-    this.currentLevel += 1;
+    if (this.currentLevel < MAX_LEVEL) this.currentLevel += 1;
   }
 
   private get maxHealth(): number {

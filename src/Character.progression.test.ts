@@ -62,4 +62,14 @@ describe('Character progression', () => {
 
     expect(character.level).toBe(3);
   });
+
+  it('a level 10 character cannot exceed level 10', () => {
+    const character = aCharacterAtLevel(10);
+
+    character.join('The Order');
+    character.join('The Shadows');
+    character.join('The Watch');
+
+    expect(character.level).toBe(10);
+  });
 });
