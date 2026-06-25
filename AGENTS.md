@@ -22,6 +22,11 @@ The skills and the philosophy behind this harness are documented in [README.md](
 
 Record durable conventions and decisions here — version-controlled and visible to anyone working in this repo. Do NOT keep them in private/hidden agent memory.
 
+## Refactoring
+
+- Refactor continually as we go — the Refactor step of red→green→refactor is not optional or deferred. After each test goes green, look for duplication, unclear names, long methods, and accidental complexity in BOTH the test and the production code, and clean them up while the bar is green.
+- Keep refactorings on their own commits, separate from behavior changes (ACN `. t` / `. r`), so each commit is either new behavior or a provable structure change — never both.
+
 ## Tests
 
 - Follow Arlo Belshee's [readable-test standards](https://arlobelshee.com/what-makes-a-good-test-suite/arlo-belshee/): builder names reveal intent, never bare magic-number arguments. Prefer `aCharacterAtLevel(6)` over `aCharacter(6)`; keep an argless `aCharacter()` when the value is irrelevant.
