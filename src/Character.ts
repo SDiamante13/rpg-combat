@@ -10,6 +10,9 @@ export class Character {
   }
 
   dealDamage(target: Character, damage: number): void {
+    if (target === this) {
+      throw new Error('A character cannot damage itself');
+    }
     target.currentHealth = Math.max(0, target.currentHealth - damage);
   }
 }

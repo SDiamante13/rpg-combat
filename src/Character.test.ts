@@ -28,4 +28,11 @@ describe('Character', () => {
     expect(target.health).toBe(0);
     expect(target.isAlive).toBe(false);
   });
+
+  it('rejects dealing damage to itself', () => {
+    const character = new Character();
+
+    expect(() => character.dealDamage(character, 100)).toThrow('A character cannot damage itself');
+    expect(character.health).toBe(1000);
+  });
 });
