@@ -7,7 +7,7 @@ const HIGH_LEVEL = 6;
 const LEVEL_GAP_FOR_DAMAGE_MODIFIER = 5;
 const REDUCED_DAMAGE_FACTOR = 0.5;
 const INCREASED_DAMAGE_FACTOR = 1.5;
-const DAMAGE_TO_LEVEL_UP = 1000;
+const DAMAGE_PER_LEVEL = 1000;
 
 export class Character implements Target {
   private currentHealth = BASE_MAX_HEALTH;
@@ -69,7 +69,7 @@ export class Character implements Target {
 
   private recordSurvivedDamage(amount: number): void {
     this.damageBuffer += amount;
-    if (this.damageBuffer < DAMAGE_TO_LEVEL_UP) return;
+    if (this.damageBuffer < this.level * DAMAGE_PER_LEVEL) return;
     this.damageBuffer = 0;
     this.gainLevel();
   }
