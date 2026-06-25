@@ -1,0 +1,23 @@
+[
+  {
+    "text": "Character.ts is clean \u2014 69 lines, every method tiny, no real duplication. The abstraction will emerge when Story 4 forces sharing, per \"make the change easy, then the easy change.\" Walk-the-talk satisfied.",
+    "context": "After Story 3 \u2014 letting design emerge instead of speculating",
+    "tag": "emergent design \u00b7 Kent Beck"
+  },
+  {
+    "text": "The test should read as a specification, with intention-revealing names and no incidental decoding. The name should carry the meaning.",
+    "context": "On a magic-number test builder, aCharacter(6)",
+    "tag": "readable tests \u00b7 Arlo Belshee"
+  },
+  {
+    "text": "Behavior 3 forces a shared targeting abstraction. I'll have the subagent do it in two commits: a pure prep-refactor first, then the feature.",
+    "context": "Story 4 \u2014 separating the refactor from the change",
+    "tag": "refactor-then-add \u00b7 Kent Beck"
+  },
+  {
+    "text": "The duplication is the \"create an attacker, wound a character\" setup repeated across heal/death tests, and bare .",
+    "context": "",
+    "tag": "clean code",
+    "auto": true
+  }
+]

@@ -11,6 +11,27 @@ npm test
 
 This is a research setup for technical coaches. The point isn't the kata — it's that the whole harness is in plain sight. Open `.claude/` and `AGENTS.md` and you can see exactly which skills are available, which rules apply, and where the TDD gate bites. No hidden global config, no surprise plugins.
 
+## The TDD-with-agents journey
+
+This repo includes an interactive record of the prompts that drove the kata — built, fittingly, by an agent loop *while the kata was being implemented*. Run with **Claude Opus 4.8 · effort: high · 1M-token context window**, using Claude Code's experimental **[Agent Teams](https://code.claude.com/docs/en/agent-teams)** (an orchestrator delegating one behavior at a time to fresh subagents).
+
+- **[`index.html`](index.html)** — interactive and self-contained: every prompt as a speech bubble, each subagent behavior linked to its commit, context-window + per-subagent token usage, code metrics, and craft-note pull-quotes. View live at **[sdiamante13.github.io/rpg-combat](https://sdiamante13.github.io/rpg-combat/)** (enable Pages: Settings → Pages → Source: GitHub Actions) or open `index.html` locally.
+- **[`screenshots/`](screenshots/README.md)** — terminal captures of the real run.
+
+### How this page was built
+
+The journey assembled *itself* — a second agent running in the background **while the kata was being written**.
+
+- A small script reads Claude Code's own **session logs** (its JSONL transcripts), pulls out the prompts the developer typed, the subagent behaviors, and the token/context numbers, then rebuilds the page.
+- A self-paced **`/loop`** re-runs periodically: it picks up new prompts, tags each with its TDD phase, links behaviors to their commits, and commits the refreshed page.
+- All of it runs on a **separate git worktree**, so the page-builder never touches the kata's working files.
+
+The interesting part is that last point: **looping while working, on a worktree.** The observer and the observed share a repo but not a workspace, so neither blocks the other — the kata run produces the logs, and the loop turns them into this page in near-real-time.
+
+### Agent Teams (experimental)
+
+This run used Claude Code's experimental **Agent Teams** feature — turn it on by setting `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` in `settings.json` ([docs](https://code.claude.com/docs/en/agent-teams)). The orchestrator owns the task list and spawns a fresh subagent per behavior, keeping its own context lean while each behavior runs its full red→green cycle in a disposable context.
+
 ## Philosophy
 
 Less is more. The agent instructions (`AGENTS.md`) are intentionally lean — enough to establish core principles without bloat. The power comes from specialized skills that activate specific workflows when you need them.

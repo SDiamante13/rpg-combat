@@ -1,0 +1,27 @@
+{
+  "prod": {
+    "files": 7,
+    "loc": 187,
+    "fns": 26,
+    "loc_per_file": 26.7,
+    "loc_per_fn": 7.2,
+    "comments": 0
+  },
+  "test": {
+    "files": 7,
+    "loc": 248,
+    "fns": 40,
+    "loc_per_file": 35.4,
+    "loc_per_fn": 6.2,
+    "comments": 0
+  },
+  "tests": 33,
+  "classes": 4,
+  "methods_per_class": 6.5,
+  "test_prod_ratio": 1.33,
+  "tests_per_behavior": 1.0,
+  "comment_density": 0.0,
+  "commits": 56,
+  "behaviors": 33,
+  "refactors": 5
+}

@@ -1,0 +1,394 @@
+[
+  {
+    "sha": "2d4099dbe3aea6056a5cd8d5a866e48efca7be56",
+    "short": "2d4099d",
+    "ts": "2026-06-25T00:34:38-04:00",
+    "subject": "docs: add code review report and PDF; kata ending here by choice",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/2d4099dbe3aea6056a5cd8d5a866e48efca7be56"
+  },
+  {
+    "sha": "2fbdb7c49d510ef0d558c8a1ec8a36571d70760d",
+    "short": "2fbdb7c",
+    "ts": "2026-06-25T00:21:03-04:00",
+    "subject": "test(character): a gained level is never lost",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/2fbdb7c49d510ef0d558c8a1ec8a36571d70760d"
+  },
+  {
+    "sha": "ad2d71466bfcd33bc01abccc32f5932ad89b5bae",
+    "short": "ad2d714",
+    "ts": "2026-06-25T00:19:48-04:00",
+    "subject": "feat(character): cap level at 10",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/ad2d71466bfcd33bc01abccc32f5932ad89b5bae"
+  },
+  {
+    "sha": "82ec02c7d9612e31f15f811205e35c0882a19c53",
+    "short": "82ec02c",
+    "ts": "2026-06-25T00:18:52-04:00",
+    "subject": "feat(character): gain a level for every 3 distinct factions",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/82ec02c7d9612e31f15f811205e35c0882a19c53"
+  },
+  {
+    "sha": "6c7f7d6db02cf887c6f2efd46f91edc600a38066",
+    "short": "6c7f7d6",
+    "ts": "2026-06-25T00:17:44-04:00",
+    "subject": "feat(character): gain a level after joining 3 distinct factions",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/6c7f7d6db02cf887c6f2efd46f91edc600a38066"
+  },
+  {
+    "sha": "e9a06b96d885328e82e072f73c746865aec1f45e",
+    "short": "e9a06b9",
+    "ts": "2026-06-25T00:16:35-04:00",
+    "subject": "feat(character): level-up threshold scales with level",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/e9a06b96d885328e82e072f73c746865aec1f45e"
+  },
+  {
+    "sha": "953583c3475c3802fdc05dbfceef30b8ce646df8",
+    "short": "953583c",
+    "ts": "2026-06-25T00:15:12-04:00",
+    "subject": "test(character): lethal blow crossing threshold grants no level",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/953583c3475c3802fdc05dbfceef30b8ce646df8"
+  },
+  {
+    "sha": "76f26b643d6227e12caac510e86b673657c32246",
+    "short": "76f26b6",
+    "ts": "2026-06-25T00:13:44-04:00",
+    "subject": "feat(character): gain a level after surviving 1000 damage",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/76f26b643d6227e12caac510e86b673657c32246"
+  },
+  {
+    "sha": "53cf77fee2ddbce37ac5ae24e97ac6fade8a7430",
+    "short": "53cf77f",
+    "ts": "2026-06-25T00:10:25-04:00",
+    "subject": "e - add makeAllies test helper and use it",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/53cf77fee2ddbce37ac5ae24e97ac6fade8a7430"
+  },
+  {
+    "sha": "e32191992be0e9dab91a63aa5c9e1b24bee67af6",
+    "short": "e321919",
+    "ts": "2026-06-25T00:10:04-04:00",
+    "subject": "r - use magical-object builders in healing tests",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/e32191992be0e9dab91a63aa5c9e1b24bee67af6"
+  },
+  {
+    "sha": "0e5774aff9eca04a308c0d85b388165ef5d644f6",
+    "short": "0e5774a",
+    "ts": "2026-06-25T00:09:51-04:00",
+    "subject": "r - use magical-object builders in combat tests",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/0e5774aff9eca04a308c0d85b388165ef5d644f6"
+  },
+  {
+    "sha": "9bef67e78bb76f310ac54a1c356f984ce2ac9940",
+    "short": "9bef67e",
+    "ts": "2026-06-25T00:09:37-04:00",
+    "subject": "r - use builder in MagicalObject tests",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/9bef67e78bb76f310ac54a1c356f984ce2ac9940"
+  },
+  {
+    "sha": "4499cc52d24dd2c984209811af44257a28024f0c",
+    "short": "4499cc5",
+    "ts": "2026-06-25T00:09:25-04:00",
+    "subject": "e - add magical-object test builders",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/4499cc52d24dd2c984209811af44257a28024f0c"
+  },
+  {
+    "sha": "8c828bf337056acab4a9ab9e983520231f690800",
+    "short": "8c828bf",
+    "ts": "2026-06-25T00:09:09-04:00",
+    "subject": "r - name the damager in aCharacterDamagedBy",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/8c828bf337056acab4a9ab9e983520231f690800"
+  },
+  {
+    "sha": "9e1b6a80019d3cdc3cb3b4e6ef44d4e15519abc8",
+    "short": "9e1b6a8",
+    "ts": "2026-06-25T00:08:56-04:00",
+    "subject": "r - name weapon durability loss constant",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/9e1b6a80019d3cdc3cb3b4e6ef44d4e15519abc8"
+  },
+  {
+    "sha": "70389df2b04a6bf6f2c3da4a402dc417d193958f",
+    "short": "70389df",
+    "ts": "2026-06-25T00:08:42-04:00",
+    "subject": "r - name Character domain constants",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/70389df2b04a6bf6f2c3da4a402dc417d193958f"
+  },
+  {
+    "sha": "4ad20e1a59f7fd823aa826fc99b6d5665015a358",
+    "short": "4ad20e1",
+    "ts": "2026-06-25T00:08:24-04:00",
+    "subject": "t - add silent test runner script",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/4ad20e1a59f7fd823aa826fc99b6d5665015a358"
+  },
+  {
+    "sha": "f6c9eb3ef021451ee50a9ed93363e3dade291764",
+    "short": "f6c9eb3",
+    "ts": "2026-06-25T00:03:20-04:00",
+    "subject": "test(magical-object): lock that a weapon cannot heal",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/f6c9eb3ef021451ee50a9ed93363e3dade291764"
+  },
+  {
+    "sha": "526e28409b5dc3811a15c9c6e612052dbeeab25c",
+    "short": "526e284",
+    "ts": "2026-06-25T00:02:05-04:00",
+    "subject": "feat(magical-object): magical weapon deals fixed damage and wears down",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/526e28409b5dc3811a15c9c6e612052dbeeab25c"
+  },
+  {
+    "sha": "1b82c1c1abeec6b07dea20706ef7692de5a5078b",
+    "short": "1b82c1c",
+    "ts": "2026-06-25T00:01:41-04:00",
+    "subject": ". r route character damage through takeDamage",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/1b82c1c1abeec6b07dea20706ef7692de5a5078b"
+  },
+  {
+    "sha": "89a5e8a738133e5823d183e112244fab45413fab",
+    "short": "89a5e8a",
+    "ts": "2026-06-25T00:00:23-04:00",
+    "subject": "feat(magical-object): healing object cannot deal damage",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/89a5e8a738133e5823d183e112244fab45413fab"
+  },
+  {
+    "sha": "7534d24096f3b78f534826ce45a3acbc7393ff88",
+    "short": "7534d24",
+    "ts": "2026-06-24T23:59:50-04:00",
+    "subject": ". r introduce HealingObject with drawHealing capability",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/7534d24096f3b78f534826ce45a3acbc7393ff88"
+  },
+  {
+    "sha": "406728d8b5aae9087275841d4fd2f128c1526fd7",
+    "short": "406728d",
+    "ts": "2026-06-24T23:56:04-04:00",
+    "subject": "feat(character): draw health from a magical object",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/406728d8b5aae9087275841d4fd2f128c1526fd7"
+  },
+  {
+    "sha": "9a5753781a35e6b387baf1e58b1c331952de045e",
+    "short": "9a57537",
+    "ts": "2026-06-24T23:54:02-04:00",
+    "subject": "feat(character): reject healing a magical object",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/9a5753781a35e6b387baf1e58b1c331952de045e"
+  },
+  {
+    "sha": "b31274765ac2b23fc4a8c46b183112ec8798da2b",
+    "short": "b312747",
+    "ts": "2026-06-24T23:53:10-04:00",
+    "subject": ". r extract healCharacter from heal",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/b31274765ac2b23fc4a8c46b183112ec8798da2b"
+  },
+  {
+    "sha": "06f1099cd0ec493a637c8974a7527467bb6f6f96",
+    "short": "06f1099",
+    "ts": "2026-06-24T23:51:16-04:00",
+    "subject": "feat(magical-object): destroyed when health reaches zero",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/06f1099cd0ec493a637c8974a7527467bb6f6f96"
+  },
+  {
+    "sha": "e20388a12de62ce6edc2c18e87d3c8cd85b1472e",
+    "short": "e20388a",
+    "ts": "2026-06-24T23:50:21-04:00",
+    "subject": "feat(magical-object): created with fixed max health and no faction",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/e20388a12de62ce6edc2c18e87d3c8cd85b1472e"
+  },
+  {
+    "sha": "a3b611e6c90999233bf31ca85f212659a265ae8e",
+    "short": "a3b611e",
+    "ts": "2026-06-24T23:47:45-04:00",
+    "subject": "docs: require continual refactoring of tests and production code",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/a3b611e6c90999233bf31ca85f212659a265ae8e"
+  },
+  {
+    "sha": "00e0a70e0865cc9299b2cac01abf1e97b2193569",
+    "short": "00e0a70",
+    "ts": "2026-06-24T23:47:14-04:00",
+    "subject": "feat(character): reject healing a non-ally",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/00e0a70e0865cc9299b2cac01abf1e97b2193569"
+  },
+  {
+    "sha": "483d5dc8d1de1b1b1243ec4c5b2af92a1b67f2f8",
+    "short": "483d5dc",
+    "ts": "2026-06-24T23:46:12-04:00",
+    "subject": "feat(character): allies can heal each other",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/483d5dc8d1de1b1b1243ec4c5b2af92a1b67f2f8"
+  },
+  {
+    "sha": "7711ac0a00fa08cc3f951f2352ff90dbadfb832d",
+    "short": "7711ac0",
+    "ts": "2026-06-24T23:44:36-04:00",
+    "subject": ". t split Character tests by capability area into separate files",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/7711ac0a00fa08cc3f951f2352ff90dbadfb832d"
+  },
+  {
+    "sha": "584aa53d0a2b6c5dd078575f1d2fdf70458c648c",
+    "short": "584aa53",
+    "ts": "2026-06-24T23:41:02-04:00",
+    "subject": "feat(character): allies cannot damage each other",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/584aa53d0a2b6c5dd078575f1d2fdf70458c648c"
+  },
+  {
+    "sha": "fdd6e5598393808c000aff705830727ad6d324b9",
+    "short": "fdd6e55",
+    "ts": "2026-06-24T23:39:54-04:00",
+    "subject": "test(character): lock membership in multiple factions",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/fdd6e5598393808c000aff705830727ad6d324b9"
+  },
+  {
+    "sha": "6fc409ed7106286caffb003953d8d14fe363697c",
+    "short": "6fc409e",
+    "ts": "2026-06-24T23:38:41-04:00",
+    "subject": "feat(character): leave a faction removes membership",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/6fc409ed7106286caffb003953d8d14fe363697c"
+  },
+  {
+    "sha": "77f2c8c4a3ffe26970a6bd47d1518f6ba5b52954",
+    "short": "77f2c8c",
+    "ts": "2026-06-24T23:37:52-04:00",
+    "subject": "feat(character): join a faction makes member",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/77f2c8c4a3ffe26970a6bd47d1518f6ba5b52954"
+  },
+  {
+    "sha": "2ced46fa3db6b188b7ce7f329791e00ee04d4d70",
+    "short": "2ced46f",
+    "ts": "2026-06-24T23:36:55-04:00",
+    "subject": "feat(character): new character belongs to no faction",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/2ced46fa3db6b188b7ce7f329791e00ee04d4d70"
+  },
+  {
+    "sha": "a3a21f0aca784f8277566953afd8266ef77bb26f",
+    "short": "a3a21f0",
+    "ts": "2026-06-24T23:35:15-04:00",
+    "subject": "test(character): lock unmodified damage within 5 levels",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/a3a21f0aca784f8277566953afd8266ef77bb26f"
+  },
+  {
+    "sha": "617142b1d256739f0c673d980cccc52611426e87",
+    "short": "617142b",
+    "ts": "2026-06-24T23:34:00-04:00",
+    "subject": "feat(character): boost damage by 50% to target 5+ levels lower",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/617142b1d256739f0c673d980cccc52611426e87"
+  },
+  {
+    "sha": "f1e0d80b946a93d7d245bf9565a2e07eb1d84183",
+    "short": "f1e0d80",
+    "ts": "2026-06-24T23:32:20-04:00",
+    "subject": "docs: record test conventions in AGENTS.md",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/f1e0d80b946a93d7d245bf9565a2e07eb1d84183"
+  },
+  {
+    "sha": "344b6533b333e353ae105ffd7d271d7bb487e333",
+    "short": "344b653",
+    "ts": "2026-06-24T23:32:19-04:00",
+    "subject": ". t move test helpers to bottom in call order",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/344b6533b333e353ae105ffd7d271d7bb487e333"
+  },
+  {
+    "sha": "c964fb18f75dcb4293405fcb11a08fadffc94d5b",
+    "short": "c964fb1",
+    "ts": "2026-06-24T23:29:15-04:00",
+    "subject": ". t name level builder so test intent is explicit",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/c964fb18f75dcb4293405fcb11a08fadffc94d5b"
+  },
+  {
+    "sha": "cb49db2d2e9809e0f5c2bbfd03c2431536f96ba1",
+    "short": "cb49db2",
+    "ts": "2026-06-24T23:27:07-04:00",
+    "subject": ". t extract character builders for readable test setup",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/cb49db2d2e9809e0f5c2bbfd03c2431536f96ba1"
+  },
+  {
+    "sha": "bc282f2f232823bf2837f077fd0597dfec633861",
+    "short": "bc282f2",
+    "ts": "2026-06-24T23:25:02-04:00",
+    "subject": "feat(character): halve damage to target 5+ levels higher",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/bc282f2f232823bf2837f077fd0597dfec633861"
+  },
+  {
+    "sha": "b03c7fd0912aa0383395f466f59a6e445862b96e",
+    "short": "b03c7fd",
+    "ts": "2026-06-24T23:24:08-04:00",
+    "subject": "feat(character): level 6+ heals up to 1500",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/b03c7fd0912aa0383395f466f59a6e445862b96e"
+  },
+  {
+    "sha": "441aae1c11d9e4722e3ae1f53338f1d4ea118a22",
+    "short": "441aae1",
+    "ts": "2026-06-24T23:22:59-04:00",
+    "subject": "chore: exclude .claude and markdown from prettier formatting",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/441aae1c11d9e4722e3ae1f53338f1d4ea118a22"
+  },
+  {
+    "sha": "e0954e0c0ded8493c0614628fae0235bf7977640",
+    "short": "e0954e0",
+    "ts": "2026-06-24T23:20:11-04:00",
+    "subject": "feat(character): heal cannot exceed 1000 below level 6",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/e0954e0c0ded8493c0614628fae0235bf7977640"
+  },
+  {
+    "sha": "584b195b25ee049d12f104887b8fd5225b0d57f6",
+    "short": "584b195",
+    "ts": "2026-06-24T23:19:08-04:00",
+    "subject": "feat(character): new character starts at level 1",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/584b195b25ee049d12f104887b8fd5225b0d57f6"
+  },
+  {
+    "sha": "a7222abbadf6763a6216b8ab47b9bf46d9568715",
+    "short": "a7222ab",
+    "ts": "2026-06-24T23:18:00-04:00",
+    "subject": "feat(character): reject healing a dead character",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/a7222abbadf6763a6216b8ab47b9bf46d9568715"
+  },
+  {
+    "sha": "94d8edaefd5b73e16e231797958f08194c48a92b",
+    "short": "94d8eda",
+    "ts": "2026-06-24T23:17:09-04:00",
+    "subject": "feat(character): self heal increases health",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/94d8edaefd5b73e16e231797958f08194c48a92b"
+  },
+  {
+    "sha": "2ecd6c67e9ae33f6ba6430e5c39ece41084bd708",
+    "short": "2ecd6c6",
+    "ts": "2026-06-24T23:16:04-04:00",
+    "subject": "feat(character): reject self damage",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/2ecd6c67e9ae33f6ba6430e5c39ece41084bd708"
+  },
+  {
+    "sha": "c4d9456fbee433f5a15d2e6777dcbdb99fca35d8",
+    "short": "c4d9456",
+    "ts": "2026-06-24T23:15:09-04:00",
+    "subject": "feat(character): lethal damage floors health at zero and kills",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/c4d9456fbee433f5a15d2e6777dcbdb99fca35d8"
+  },
+  {
+    "sha": "4ac6bedf4394bf09e040c78fd9e6492e5e0aa45a",
+    "short": "4ac6bed",
+    "ts": "2026-06-24T23:14:15-04:00",
+    "subject": "feat(character): deal damage subtracts from target health",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/4ac6bedf4394bf09e040c78fd9e6492e5e0aa45a"
+  },
+  {
+    "sha": "cfab07a97b7c7a5cb1e00a3c1e5911c9a6082e38",
+    "short": "cfab07a",
+    "ts": "2026-06-24T23:12:55-04:00",
+    "subject": "feat(character): new character starts at 1000 health and alive",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/cfab07a97b7c7a5cb1e00a3c1e5911c9a6082e38"
+  },
+  {
+    "sha": "daad2f184e0b03d58e2d6a7954158fac7cc3ed0e",
+    "short": "daad2f1",
+    "ts": "2026-06-24T23:04:11-04:00",
+    "subject": "Split user stories into backlog",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/daad2f184e0b03d58e2d6a7954158fac7cc3ed0e"
+  },
+  {
+    "sha": "4c2215610872538f5dae1786d088d9a76f74bd04",
+    "short": "4c22156",
+    "ts": "2026-06-24T23:04:04-04:00",
+    "subject": "initial harness setup",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/4c2215610872538f5dae1786d088d9a76f74bd04"
+  },
+  {
+    "sha": "22c16c8146a529227699b1dcc00c9f837ac94117",
+    "short": "22c16c8",
+    "ts": "2026-06-03T08:41:06Z",
+    "subject": "initial import",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/22c16c8146a529227699b1dcc00c9f837ac94117"
+  }
+]
