@@ -5,6 +5,10 @@ export class Character {
     return this.currentHealth;
   }
 
+  get level(): number {
+    return 1;
+  }
+
   get isAlive(): boolean {
     return this.currentHealth > 0;
   }

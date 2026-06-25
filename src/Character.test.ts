@@ -10,6 +10,12 @@ describe('Character', () => {
     expect(character.isAlive).toBe(true);
   });
 
+  it('a new character is level 1', () => {
+    const character = new Character();
+
+    expect(character.level).toBe(1);
+  });
+
   it('dealDamage subtracts damage from target health', () => {
     const attacker = new Character();
     const target = new Character();
