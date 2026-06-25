@@ -62,6 +62,14 @@ describe('Character', () => {
     expect(character.health).toBe(1000);
   });
 
+  it('a level 6+ character can heal up to 1500 health', () => {
+    const character = new Character(6);
+
+    character.heal(600);
+
+    expect(character.health).toBe(1500);
+  });
+
   it('rejects healing a dead character', () => {
     const attacker = new Character();
     const character = new Character();

@@ -1,14 +1,18 @@
 export class Character {
-  private static readonly maxHealth = 1000;
+  private currentHealth = 1000;
 
-  private currentHealth: number = Character.maxHealth;
+  constructor(private readonly characterLevel = 1) {}
 
   get health(): number {
     return this.currentHealth;
   }
 
   get level(): number {
-    return 1;
+    return this.characterLevel;
+  }
+
+  private get maxHealth(): number {
+    return this.level >= 6 ? 1500 : 1000;
   }
 
   get isAlive(): boolean {
@@ -26,6 +30,6 @@ export class Character {
     if (!this.isAlive) {
       throw new Error('A dead character cannot heal');
     }
-    this.currentHealth = Math.min(Character.maxHealth, this.currentHealth + amount);
+    this.currentHealth = Math.min(this.maxHealth, this.currentHealth + amount);
   }
 }
