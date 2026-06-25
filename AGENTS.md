@@ -26,4 +26,5 @@ Record durable conventions and decisions here — version-controlled and visible
 
 - Follow Arlo Belshee's [readable-test standards](https://arlobelshee.com/what-makes-a-good-test-suite/arlo-belshee/): builder names reveal intent, never bare magic-number arguments. Prefer `aCharacterAtLevel(6)` over `aCharacter(6)`; keep an argless `aCharacter()` when the value is irrelevant.
 - One test per acceptance criterion — do not consolidate away spec value.
-- Place all helper functions at the bottom of the test file, ordered by first call.
+- Place any local helper functions at the bottom of the test file, ordered by first call.
+- Character tests are split by capability area: `Character.combat.test.ts`, `Character.healing.test.ts`, `Character.leveling.test.ts`, `Character.factions.test.ts`. Add a new test to the file for its area. Shared builders (`aCharacter`, `aCharacterAtLevel`, `aCharacterDamagedBy`, `aDeadCharacter`) live in `src/character-builders.ts` — import them, don't redefine.
