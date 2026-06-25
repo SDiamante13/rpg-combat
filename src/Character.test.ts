@@ -101,6 +101,16 @@ describe('Character', () => {
     expect(character.belongsTo('The Order')).toBe(true);
   });
 
+  it('joining multiple factions makes the character a member of all of them', () => {
+    const character = aCharacter();
+
+    character.join('The Order');
+    character.join('The Shadows');
+
+    expect(character.belongsTo('The Order')).toBe(true);
+    expect(character.belongsTo('The Shadows')).toBe(true);
+  });
+
   it('leaving a faction removes membership', () => {
     const character = aCharacter();
     character.join('The Order');
