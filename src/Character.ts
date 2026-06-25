@@ -15,4 +15,8 @@ export class Character {
     }
     target.currentHealth = Math.max(0, target.currentHealth - damage);
   }
+
+  heal(amount: number): void {
+    this.currentHealth += amount;
+  }
 }

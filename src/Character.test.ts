@@ -35,4 +35,14 @@ describe('Character', () => {
     expect(() => character.dealDamage(character, 100)).toThrow('A character cannot damage itself');
     expect(character.health).toBe(1000);
   });
+
+  it('healing an alive character below max increases its health', () => {
+    const attacker = new Character();
+    const character = new Character();
+    attacker.dealDamage(character, 100);
+
+    character.heal(50);
+
+    expect(character.health).toBe(950);
+  });
 });
