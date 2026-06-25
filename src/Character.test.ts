@@ -2,24 +2,6 @@ import { describe, expect, it } from 'vitest';
 
 import { Character } from './Character.ts';
 
-function aCharacter(): Character {
-  return new Character();
-}
-
-function aCharacterAtLevel(level: number): Character {
-  return new Character(level);
-}
-
-function aCharacterDamagedBy(amount: number): Character {
-  const character = aCharacter();
-  aCharacter().dealDamage(character, amount);
-  return character;
-}
-
-function aDeadCharacter(): Character {
-  return aCharacterDamagedBy(1000);
-}
-
 describe('Character', () => {
   it('starts with 1000 health and alive', () => {
     const character = aCharacter();
@@ -96,3 +78,21 @@ describe('Character', () => {
     expect(character.health).toBe(0);
   });
 });
+
+function aCharacter(): Character {
+  return new Character();
+}
+
+function aCharacterDamagedBy(amount: number): Character {
+  const character = aCharacter();
+  aCharacter().dealDamage(character, amount);
+  return character;
+}
+
+function aCharacterAtLevel(level: number): Character {
+  return new Character(level);
+}
+
+function aDeadCharacter(): Character {
+  return aCharacterDamagedBy(1000);
+}
