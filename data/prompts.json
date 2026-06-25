@@ -258,5 +258,15 @@
     "body": null,
     "chars": 102,
     "index": 25
+  },
+  {
+    "session": "b022bf3e-2c4d-4054-81b0-fe94da996734",
+    "ts": "2026-06-25T04:37:49.487Z",
+    "kind": "prompt",
+    "command": null,
+    "display": "delete the .playwright folder",
+    "body": null,
+    "chars": 29,
+    "index": 26
   }
 ]

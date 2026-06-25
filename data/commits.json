@@ -1,10 +1,31 @@
 [
   {
-    "sha": "2d4099dbe3aea6056a5cd8d5a866e48efca7be56",
-    "short": "2d4099d",
-    "ts": "2026-06-25T00:34:38-04:00",
+    "sha": "191ff98dc79a0c8ca98a25dbc4b3c8d59969ee5c",
+    "short": "191ff98",
+    "ts": "2026-06-25T10:55:05-04:00",
+    "subject": "Journey: render panels once + auto-collapse while searching",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/191ff98dc79a0c8ca98a25dbc4b3c8d59969ee5c"
+  },
+  {
+    "sha": "61cd781121652709d0bac25412fbed65cc832ca2",
+    "short": "61cd781",
+    "ts": "2026-06-25T10:45:17-04:00",
+    "subject": "Enable experimental Agent Teams in settings",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/61cd781121652709d0bac25412fbed65cc832ca2"
+  },
+  {
+    "sha": "935ec6482f758f89394b494ba46ab480c1501da0",
+    "short": "935ec64",
+    "ts": "2026-06-25T00:43:10-04:00",
+    "subject": "Add interactive TDD-with-agents journey (prompts, subagent commits, token/context usage, code metrics)",
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/935ec6482f758f89394b494ba46ab480c1501da0"
+  },
+  {
+    "sha": "37dca520953ac66042afe66662c73889a73ec55d",
+    "short": "37dca52",
+    "ts": "2026-06-25T00:37:18-04:00",
     "subject": "docs: add code review report and PDF; kata ending here by choice",
-    "url": "https://github.com/SDiamante13/rpg-combat/commit/2d4099dbe3aea6056a5cd8d5a866e48efca7be56"
+    "url": "https://github.com/SDiamante13/rpg-combat/commit/37dca520953ac66042afe66662c73889a73ec55d"
   },
   {
     "sha": "2fbdb7c49d510ef0d558c8a1ec8a36571d70760d",

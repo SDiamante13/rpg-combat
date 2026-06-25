@@ -4,67 +4,100 @@
     "phase": "spec",
     "intent": "specify",
     "summary": "Split the user stories into independent vertical slices with SPIDR and wrote one file per story under docs/backlog/.",
-    "details": ["SPIDR applicability table", "wrote docs/backlog/*.md", "dependency order shown"]
+    "details": [
+      "SPIDR applicability table",
+      "wrote docs/backlog/*.md",
+      "dependency order shown"
+    ]
   },
   "2026-06-25T02:51:49.037Z": {
     "phase": "meta",
     "intent": "specify",
     "summary": "Brainstormed visualization ideas for the prompt journey and interviewed for audience, data source, and medium.",
-    "details": ["8 viz concepts", "AskUserQuestion rounds"]
+    "details": [
+      "8 viz concepts",
+      "AskUserQuestion rounds"
+    ]
   },
   "2026-06-25T02:52:23.141Z": {
     "phase": "spec",
     "intent": "refine",
     "summary": "Reformatted the Given/When/Then acceptance criteria onto separate lines across the backlog story files.",
-    "details": ["edited docs/backlog/*.md"]
+    "details": [
+      "edited docs/backlog/*.md"
+    ]
   },
   "2026-06-25T02:56:39.756Z": {
     "phase": "meta",
     "intent": "redirect",
     "summary": "Mapped the three sessions, excluded the harness-setup session, and created a git worktree so the viz work would not touch the in-progress branch.",
-    "details": ["identified kata vs harness sessions", "git worktree add ../rpg-combat-journey"]
+    "details": [
+      "identified kata vs harness sessions",
+      "git worktree add ../rpg-combat-journey"
+    ]
   },
   "2026-06-25T02:57:54.015Z": {
     "phase": "ops",
     "intent": "approve",
     "summary": "Approved committing and pushing the backlog work via the commit skill.",
-    "details": ["/commit short message"]
+    "details": [
+      "/commit short message"
+    ]
   },
   "2026-06-25T02:58:02.354Z": {
     "phase": "ops",
     "intent": "git",
     "summary": "Ran the commit skill: staged the backlog, wrote a short message, committed and pushed.",
-    "details": ["git add/commit/push"]
+    "details": [
+      "git add/commit/push"
+    ]
   },
   "2026-06-25T02:58:15.908Z": {
     "phase": "meta",
     "intent": "nudge",
     "summary": "Granted permission to skip the TDD gate for the viz tooling; switched to writing tooling files via shell.",
-    "details": ["bypassed TDD gate for non-kata tooling"]
+    "details": [
+      "bypassed TDD gate for non-kata tooling"
+    ]
   },
   "2026-06-25T02:58:38.979Z": {
     "phase": "meta",
     "intent": "nudge",
     "summary": "Continued building the extractor and inspecting transcript structure.",
-    "details": ["wrote tools/extract_prompts.py", "discovered last-prompt records"]
+    "details": [
+      "wrote tools/extract_prompts.py",
+      "discovered last-prompt records"
+    ]
   },
   "2026-06-25T02:59:34.491Z": {
     "phase": "ops",
     "intent": "redirect",
     "summary": "Stashed the viz tooling, amended the src commit, then resumed the backlog work to keep history clean.",
-    "details": ["git stash", "git commit --amend", "resumed backlog"]
+    "details": [
+      "git stash",
+      "git commit --amend",
+      "resumed backlog"
+    ]
   },
   "2026-06-25T03:00:23.414Z": {
     "phase": "meta",
     "intent": "redirect",
     "summary": "Paused the build to present a revised plan and ASCII wireframes, pivoting the design to a speech-bubble conversation with agent summaries.",
-    "details": ["ASCII wireframes", "clarifying questions", "scope guardrails"]
+    "details": [
+      "ASCII wireframes",
+      "clarifying questions",
+      "scope guardrails"
+    ]
   },
   "2026-06-25T03:03:34.133Z": {
     "phase": "ops",
     "intent": "constrain",
     "summary": "Did not implement the kata; created an empty src/index.ts placeholder and amended the commit to satisfy the failing check.",
-    "details": ["src/index.ts = export {};", "git commit --amend", "force-push with lease"]
+    "details": [
+      "src/index.ts = export {};",
+      "git commit --amend",
+      "force-push with lease"
+    ]
   },
   "2026-06-25T03:09:30.138Z": {
     "phase": "meta",
@@ -81,7 +114,10 @@
     "phase": "refactor",
     "intent": "correct",
     "summary": "Made test builders intention-revealing per Arlo Belshee's readable-test standards (e.g. aCharacterAtLevel(6) over bare magic numbers).",
-    "details": ["renamed test builders", "linked Arlo Belshee standards"]
+    "details": [
+      "renamed test builders",
+      "linked Arlo Belshee standards"
+    ]
   },
   "2026-06-25T03:30:29.454Z": {
     "phase": "ops",
@@ -96,25 +132,35 @@
     "phase": "refactor",
     "intent": "specify",
     "summary": "Set the test-file convention: all helper functions at the bottom, ordered by first call; recorded it in AGENTS.md.",
-    "details": ["helpers at bottom, ordered by first call"]
+    "details": [
+      "helpers at bottom, ordered by first call"
+    ]
   },
   "2026-06-25T03:32:33.644Z": {
     "phase": "meta",
     "intent": "request-impl",
     "summary": "Directed the orchestrator to commit, compact context, and continue spawning subagents for the next behaviors while preserving the task list.",
-    "details": ["commit + /compact", "preserve task list", "continue backlog"]
+    "details": [
+      "commit + /compact",
+      "preserve task list",
+      "continue backlog"
+    ]
   },
   "2026-06-25T03:27:31.169Z": {
     "phase": "refactor",
     "intent": "clarify",
     "summary": "Questioned an opaque test builder (aCharacter(6)), prompting the move to intention-revealing builder names.",
-    "details": ["flagged magic-number builder arg"]
+    "details": [
+      "flagged magic-number builder arg"
+    ]
   },
   "2026-06-25T03:25:08.339Z": {
     "phase": "refactor",
     "intent": "refactor-ask",
     "summary": "Invoked the refactor-tests skill to clean up the Story 1 test suite for clarity and behavioral coverage.",
-    "details": ["/refactor-tests on Story 1"]
+    "details": [
+      "/refactor-tests on Story 1"
+    ]
   },
   "2026-06-25T03:22:02.518Z": {
     "hide": true,
@@ -124,13 +170,19 @@
     "phase": "ops",
     "intent": "redirect",
     "summary": "Asked to continue prettier fixes and rewrite history so formatting-only changes to non-src files aren't bundled into commits.",
-    "details": ["scope commits to src", "rewrite commits to drop stray formatting"]
+    "details": [
+      "scope commits to src",
+      "rewrite commits to drop stray formatting"
+    ]
   },
   "2026-06-25T03:25:06.047Z": {
     "phase": "refactor",
     "intent": "refactor-ask",
     "summary": "Before Story 2, asked to run /refactor-tests to extract helper functions and improve test readability.",
-    "details": ["gate Story 2 on test cleanup", "extract helpers"]
+    "details": [
+      "gate Story 2 on test cleanup",
+      "extract helpers"
+    ]
   },
   "2026-06-25T03:41:11.647Z": {
     "phase": "refactor",
@@ -148,13 +200,18 @@
     "phase": "refactor",
     "intent": "refactor-ask",
     "summary": "Ran the sweep skill to review the codebase for structural smells (file/method length, complexity, test readability).",
-    "details": ["/sweep code-quality pass"]
+    "details": [
+      "/sweep code-quality pass"
+    ]
   },
   "2026-06-25T04:14:27.457Z": {
     "phase": "spec",
     "intent": "clarify",
     "summary": "Shared the current flat folder structure (screenshot) and asked to weigh restructuring options and their tradeoffs.",
-    "details": ["discuss folder structure", "tradeoffs of flat vs grouped"]
+    "details": [
+      "discuss folder structure",
+      "tradeoffs of flat vs grouped"
+    ]
   },
   "2026-06-25T04:18:07.180Z": {
     "phase": "spec",
@@ -162,7 +219,9 @@
     "section_id": "review",
     "section_title": "Review & wrap-up",
     "summary": "Framed the folder-structure decision around the repo's purpose \u2014 a demo for coaches \u2014 to choose the best layout.",
-    "details": ["demo-repo context drives the choice"]
+    "details": [
+      "demo-repo context drives the choice"
+    ]
   },
   "2026-06-25T04:28:52.848Z": {
     "phase": "review",
@@ -170,7 +229,9 @@
     "section_id": "review",
     "section_title": "Review & wrap-up",
     "summary": "Pushed back on whether a proposed change was actually necessary before accepting it.",
-    "details": ["challenge before accepting"]
+    "details": [
+      "challenge before accepting"
+    ]
   },
   "2026-06-25T04:30:52.119Z": {
     "phase": "review",
@@ -190,7 +251,10 @@
     "section_id": "review",
     "section_title": "Review & wrap-up",
     "summary": "Decided to save the review to a PDF in docs/ and consciously end the kata here \u2014 it's a kata, not a product.",
-    "details": ["save review as PDF under docs/", "deliberately stop \u2014 kata, not production"]
+    "details": [
+      "save review as PDF under docs/",
+      "deliberately stop \u2014 kata, not production"
+    ]
   },
   "2026-06-25T04:32:52.494Z": {
     "phase": "review",
@@ -198,7 +262,9 @@
     "section_id": "review",
     "section_title": "Review & wrap-up",
     "summary": "Approved continuing with saving the review PDF and wrapping up the kata.",
-    "details": ["proceed with wrap-up"]
+    "details": [
+      "proceed with wrap-up"
+    ]
   },
   "2026-06-25T04:35:11.577Z": {
     "phase": "review",
@@ -206,7 +272,45 @@
     "section_id": "review",
     "section_title": "Review & wrap-up",
     "summary": "Flagged markdown issues (stray * etc.) in the saved review doc and asked to fix, then commit and push everything.",
-    "details": ["clean up review markdown", "commit + push"]
+    "details": [
+      "clean up review markdown",
+      "commit + push"
+    ]
+  },
+  "2026-06-25T04:04:04.856Z": {
+    "phase": "review",
+    "intent": "analysis",
+    "no_commit": "read-only analysis \u00b7 no commit",
+    "details": [
+      "/sweep source scan \u2014 reports structural smells, makes no changes"
+    ]
+  },
+  "2026-06-25T04:04:13.147Z": {
+    "phase": "review",
+    "intent": "analysis",
+    "no_commit": "read-only analysis \u00b7 no commit",
+    "details": [
+      "/sweep test scan \u2014 reviews test readability, makes no changes"
+    ]
+  },
+  "2026-06-25T04:07:57.811Z": {
+    "phase": "refactor",
+    "intent": "refactor",
+    "commit_sha": "4499cc5",
+    "details": [
+      "5 ACN micro-refactor commits: 4499cc5 \u00b7 9bef67e \u00b7 0e5774a \u00b7 e321919 \u00b7 53cf77f",
+      "extracted magical-object test builders + makeAllies helper, used across tests"
+    ]
+  },
+  "2026-06-25T04:37:49.487Z": {
+    "phase": "ops",
+    "intent": "correct",
+    "section_id": "review",
+    "section_title": "Review & wrap-up",
+    "summary": "Asked to delete the stray .playwright artifacts folder.",
+    "details": [
+      "remove .playwright-mcp artifacts"
+    ]
   },
   "_fallback": {
     "phase": "meta",

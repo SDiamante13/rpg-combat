@@ -77,6 +77,7 @@ for e in events:
 for e in events:  # explicit commit/option links from labels (e.g. human-directed refactors)
     lab = labels.get(e["ts"], {})
     e["option"] = lab.get("option")
+    e["no_commit"] = lab.get("no_commit")
     sha = lab.get("commit_sha")
     if sha and not e.get("commit"):
         c = next((c for c in commits if c["sha"].startswith(sha) or c["short"] == sha), None)
@@ -349,7 +350,7 @@ function subTurn(e){
       </div>
       <div class="sub-task expand" tabindex="0">${esc(e.task)}${det?' <span class="expand">▾</span>':''}</div>
       ${(e.tokens||e.tools||e.ms)?`<div class="sub-cost">🪙 ${kfmt(e.tokens||0)} tokens${e.tools?` &middot; 🔧 ${e.tools} tools`:""}${e.ms?` &middot; ⏱ ${Math.round(e.ms/1000)}s`:""}</div>`:""}
-      ${e.commit?`<a class="commit" href="${e.commit.url}" target="_blank" rel="noopener" title="${esc(e.commit.subject)}"><span class="sha">🔗 ${e.commit.short}</span><span class="csub">${esc(e.commit.subject)}</span></a>`:`<span class="commit nocommit">⏳ commit pending</span>`}
+      ${e.commit?`<a class="commit" href="${e.commit.url}" target="_blank" rel="noopener" title="${esc(e.commit.subject)}"><span class="sha">🔗 ${e.commit.short}</span><span class="csub">${esc(e.commit.subject)}</span></a>`:(e.no_commit?`<span class="commit nocommit">🔍 ${esc(e.no_commit)}</span>`:`<span class="commit nocommit">⏳ commit pending</span>`)}
       ${det}
     </div></div>`;
 }
