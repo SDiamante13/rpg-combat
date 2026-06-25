@@ -31,6 +31,9 @@ export class Character {
     if (target.level - this.level >= 5) {
       return damage * 0.5;
     }
+    if (this.level - target.level >= 5) {
+      return damage * 1.5;
+    }
     return damage;
   }
 

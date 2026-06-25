@@ -71,6 +71,15 @@ describe('Character', () => {
     expect(target.health).toBe(900);
   });
 
+  it('boosts damage by 50% when the target is 5+ levels below the attacker', () => {
+    const attacker = aCharacterAtLevel(6);
+    const target = aCharacterAtLevel(1);
+
+    attacker.dealDamage(target, 200);
+
+    expect(target.health).toBe(700);
+  });
+
   it('rejects healing a dead character', () => {
     const character = aDeadCharacter();
 
