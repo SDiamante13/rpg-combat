@@ -17,3 +17,13 @@ The default STARTER_SYMBOL is ☀️
 - When I give a short or ambiguous request, ask ONE clarifying question immediately rather than guessing. Do not attempt multiple interpretations in sequence.
 
 The skills and the philosophy behind this harness are documented in [README.md](./README.md).
+
+# CONVENTIONS & DECISIONS
+
+Record durable conventions and decisions here — version-controlled and visible to anyone working in this repo. Do NOT keep them in private/hidden agent memory.
+
+## Tests
+
+- Follow Arlo Belshee's [readable-test standards](https://arlobelshee.com/what-makes-a-good-test-suite/arlo-belshee/): builder names reveal intent, never bare magic-number arguments. Prefer `aCharacterAtLevel(6)` over `aCharacter(6)`; keep an argless `aCharacter()` when the value is irrelevant.
+- One test per acceptance criterion — do not consolidate away spec value.
+- Place all helper functions at the bottom of the test file, ordered by first call.
