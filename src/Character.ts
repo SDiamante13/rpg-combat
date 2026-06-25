@@ -58,12 +58,12 @@ export class Character {
   }
 
   heal(amount: number, target: Character = this): void {
-    if (!target.isAlive) {
-      throw new Error('A dead character cannot heal');
-    }
-    if (target !== this && !this.isAlliedWith(target)) {
-      throw new Error('Cannot heal a non-ally');
-    }
+    this.healCharacter(amount, target);
+  }
+
+  private healCharacter(amount: number, target: Character): void {
+    if (!target.isAlive) throw new Error('A dead character cannot heal');
+    if (target !== this && !this.isAlliedWith(target)) throw new Error('Cannot heal a non-ally');
     target.currentHealth = Math.min(target.maxHealth, target.currentHealth + amount);
   }
 }
