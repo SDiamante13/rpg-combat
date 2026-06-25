@@ -267,7 +267,10 @@ details.usage>summary:hover{background:#f0f6ff}
     <input id="q" placeholder="search&hellip;">
   </div>
 </header>
-<main id="stream"></main>
+<main>
+  <div id="panels"></div>
+  <div id="stream"></div>
+</main>
 
 <script id="data" type="application/json">__DATA__</script>
 <script id="usage" type="application/json">__USAGE__</script>
@@ -420,6 +423,13 @@ function sectionsHTML(rows){
     return `<details class="section"${open}><summary><span>${esc(g.title)}</span><span class="sec-meta">${meta}</span></summary><div class="sec-body">${g.items.map(turnHTML).join("")}</div></details>`;
   }).join("");
 }
+function renderPanels(){
+  document.getElementById("panels").innerHTML=introHTML()+quotesPanel()+usagePanel()+metricsPanel();
+}
+function applyPanelState(){
+  const filtering=document.getElementById("role").value||document.getElementById("phase").value||document.getElementById("q").value;
+  document.querySelectorAll("#panels > details").forEach(d=>{d.open=!filtering;});
+}
 function render(){
   const fr=document.getElementById("role").value,
         fp=document.getElementById("phase").value,
@@ -427,9 +437,10 @@ function render(){
   const rows=DATA.filter(e=>
     (!fr||e.role===fr)&&(!fp||e.phase===fp)&&
     (!q||((e.display||e.task||"")+" "+(e.excerpt||"")).toLowerCase().includes(q)));
+  applyPanelState();
   const m=document.getElementById("stream");
-  if(!rows.length){m.innerHTML=introHTML()+quotesPanel()+usagePanel()+metricsPanel()+'<div class="empty">nothing matches.</div>';return;}
-  m.innerHTML=introHTML()+quotesPanel()+usagePanel()+metricsPanel()+sectionsHTML(rows);
+  if(!rows.length){m.innerHTML='<div class="empty">nothing matches.</div>';return;}
+  m.innerHTML=sectionsHTML(rows);
   m.querySelectorAll(".expand").forEach(x=>x.addEventListener("click",()=>{
     const d=x.closest(".turn").querySelector(".details");if(d)d.classList.toggle("open");
   }));
@@ -438,7 +449,7 @@ function render(){
   }));
 }
 
-initHeader();render();
+initHeader();renderPanels();render();
 ["role","phase","q"].forEach(id=>document.getElementById(id).addEventListener("input",render));
 </script>
 </body></html>"""
