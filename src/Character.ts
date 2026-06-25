@@ -17,6 +17,9 @@ export class Character {
   }
 
   heal(amount: number): void {
+    if (!this.isAlive) {
+      throw new Error('A dead character cannot heal');
+    }
     this.currentHealth += amount;
   }
 }

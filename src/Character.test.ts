@@ -45,4 +45,13 @@ describe('Character', () => {
 
     expect(character.health).toBe(950);
   });
+
+  it('rejects healing a dead character', () => {
+    const attacker = new Character();
+    const character = new Character();
+    attacker.dealDamage(character, 1000);
+
+    expect(() => character.heal(50)).toThrow('A dead character cannot heal');
+    expect(character.health).toBe(0);
+  });
 });
