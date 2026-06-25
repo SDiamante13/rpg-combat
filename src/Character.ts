@@ -43,7 +43,11 @@ export class Character implements Target {
       throw new Error('Allies cannot damage each other');
     }
     const applied = this.effectiveDamage(target, damage);
-    target.currentHealth = Math.max(0, target.currentHealth - applied);
+    target.takeDamage(applied);
+  }
+
+  takeDamage(amount: number): void {
+    this.currentHealth = Math.max(0, this.currentHealth - amount);
   }
 
   private isAlliedWith(other: Character): boolean {
