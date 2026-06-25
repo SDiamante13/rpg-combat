@@ -80,6 +80,15 @@ describe('Character', () => {
     expect(target.health).toBe(700);
   });
 
+  it('leaves damage unmodified when levels differ by fewer than 5', () => {
+    const attacker = aCharacterAtLevel(3);
+    const target = aCharacterAtLevel(5);
+
+    attacker.dealDamage(target, 200);
+
+    expect(target.health).toBe(800);
+  });
+
   it('rejects healing a dead character', () => {
     const character = aDeadCharacter();
 
