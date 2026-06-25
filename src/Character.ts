@@ -8,10 +8,12 @@ const LEVEL_GAP_FOR_DAMAGE_MODIFIER = 5;
 const REDUCED_DAMAGE_FACTOR = 0.5;
 const INCREASED_DAMAGE_FACTOR = 1.5;
 const DAMAGE_PER_LEVEL = 1000;
+const FACTIONS_FOR_LEVEL = 3;
 
 export class Character implements Target {
   private currentHealth = BASE_MAX_HEALTH;
   private readonly factions = new Set<string>();
+  private readonly factionsEverJoined = new Set<string>();
   private currentLevel: number;
   private damageBuffer = 0;
 
@@ -21,6 +23,13 @@ export class Character implements Target {
 
   join(faction: string): void {
     this.factions.add(faction);
+    this.recordFactionJoined(faction);
+  }
+
+  private recordFactionJoined(faction: string): void {
+    if (this.factionsEverJoined.has(faction)) return;
+    this.factionsEverJoined.add(faction);
+    if (this.factionsEverJoined.size === FACTIONS_FOR_LEVEL) this.gainLevel();
   }
 
   leave(faction: string): void {

@@ -39,4 +39,14 @@ describe('Character progression', () => {
     expect(character.isAlive).toBe(false);
     expect(character.level).toBe(1);
   });
+
+  it('joining 3 distinct factions grants a level', () => {
+    const character = aCharacter();
+
+    character.join('The Order');
+    character.join('The Shadows');
+    character.join('The Watch');
+
+    expect(character.level).toBe(2);
+  });
 });
