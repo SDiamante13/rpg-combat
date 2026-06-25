@@ -66,4 +66,13 @@ describe('Character healing', () => {
     expect(() => healer.heal(50, magicalObject)).toThrow('Cannot heal a magical object');
     expect(magicalObject.health).toBe(500);
   });
+
+  it("drawing from a healing object heals up to the object's remaining amount", () => {
+    const character = aCharacterDamagedBy(600);
+    const healingObject = new MagicalObject(500);
+
+    character.drawFrom(healingObject);
+
+    expect(character.health).toBe(900);
+  });
 });

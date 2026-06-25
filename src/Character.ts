@@ -1,3 +1,4 @@
+import type { MagicalObject } from './MagicalObject.ts';
 import type { Target } from './Target.ts';
 
 export class Character implements Target {
@@ -57,6 +58,10 @@ export class Character implements Target {
       return damage * 1.5;
     }
     return damage;
+  }
+
+  drawFrom(source: MagicalObject): void {
+    this.healCharacter(source.health, this);
   }
 
   heal(amount: number, target: Target = this): void {
