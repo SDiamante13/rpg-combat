@@ -1,7 +1,12 @@
 export class Character {
   private currentHealth = 1000;
+  private readonly factions = new Set<string>();
 
   constructor(private readonly characterLevel = 1) {}
+
+  belongsTo(faction: string): boolean {
+    return this.factions.has(faction);
+  }
 
   get health(): number {
     return this.currentHealth;

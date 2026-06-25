@@ -89,6 +89,10 @@ describe('Character', () => {
     expect(target.health).toBe(800);
   });
 
+  it('a new character belongs to no faction', () => {
+    expect(aCharacter().belongsTo('The Order')).toBe(false);
+  });
+
   it('rejects healing a dead character', () => {
     const character = aDeadCharacter();
 
