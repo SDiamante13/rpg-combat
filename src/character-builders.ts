@@ -6,7 +6,8 @@ export function aCharacter(): Character {
 
 export function aCharacterDamagedBy(amount: number): Character {
   const character = aCharacter();
-  aCharacter().dealDamage(character, amount);
+  const damager = aCharacter();
+  damager.dealDamage(character, amount);
   return character;
 }
 
