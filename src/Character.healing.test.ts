@@ -49,4 +49,12 @@ describe('Character healing', () => {
     expect(() => character.heal(50)).toThrow('A dead character cannot heal');
     expect(character.health).toBe(0);
   });
+
+  it('rejects healing a non-ally', () => {
+    const healer = aCharacter();
+    const stranger = aCharacterDamagedBy(100);
+
+    expect(() => healer.heal(50, stranger)).toThrow('Cannot heal a non-ally');
+    expect(stranger.health).toBe(900);
+  });
 });
