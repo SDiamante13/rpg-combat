@@ -15,6 +15,11 @@ export function aCharacterAtLevel(level: number): Character {
   return new Character(level);
 }
 
+export function makeAllies(first: Character, second: Character, faction = 'The Order'): void {
+  first.join(faction);
+  second.join(faction);
+}
+
 export function aDeadCharacter(): Character {
   return aCharacterDamagedBy(1000);
 }

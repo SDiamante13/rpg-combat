@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { aCharacter } from './character-builders.ts';
+import { aCharacter, makeAllies } from './character-builders.ts';
 
 describe('Character combat', () => {
   it('starts with 1000 health and alive', () => {
@@ -37,8 +37,7 @@ describe('Character combat', () => {
   it('allies sharing a faction cannot damage each other', () => {
     const attacker = aCharacter();
     const target = aCharacter();
-    attacker.join('The Order');
-    target.join('The Order');
+    makeAllies(attacker, target);
 
     expect(() => attacker.dealDamage(target, 200)).toThrow('Allies cannot damage each other');
     expect(target.health).toBe(1000);

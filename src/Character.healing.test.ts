@@ -5,6 +5,7 @@ import {
   aCharacterAtLevel,
   aCharacterDamagedBy,
   aDeadCharacter,
+  makeAllies,
 } from './character-builders.ts';
 import { aHealingObject, aMagicalObject } from './magical-object-builders.ts';
 
@@ -36,8 +37,7 @@ describe('Character healing', () => {
   it('an ally can heal a damaged ally', () => {
     const healer = aCharacter();
     const ally = aCharacterDamagedBy(100);
-    healer.join('The Order');
-    ally.join('The Order');
+    makeAllies(healer, ally);
 
     healer.heal(50, ally);
 
