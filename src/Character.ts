@@ -23,7 +23,15 @@ export class Character {
     if (target === this) {
       throw new Error('A character cannot damage itself');
     }
-    target.currentHealth = Math.max(0, target.currentHealth - damage);
+    const applied = this.effectiveDamage(target, damage);
+    target.currentHealth = Math.max(0, target.currentHealth - applied);
+  }
+
+  private effectiveDamage(target: Character, damage: number): number {
+    if (target.level - this.level >= 5) {
+      return damage * 0.5;
+    }
+    return damage;
   }
 
   heal(amount: number): void {
