@@ -2,50 +2,58 @@ import { describe, expect, it } from 'vitest';
 
 import { Character } from './Character.ts';
 
+function aCharacter(level = 1): Character {
+  return new Character(level);
+}
+
+function aCharacterDamagedBy(amount: number): Character {
+  const character = aCharacter();
+  aCharacter().dealDamage(character, amount);
+  return character;
+}
+
+function aDeadCharacter(): Character {
+  return aCharacterDamagedBy(1000);
+}
+
 describe('Character', () => {
   it('starts with 1000 health and alive', () => {
-    const character = new Character();
+    const character = aCharacter();
 
     expect(character.health).toBe(1000);
     expect(character.isAlive).toBe(true);
   });
 
   it('a new character is level 1', () => {
-    const character = new Character();
-
-    expect(character.level).toBe(1);
+    expect(aCharacter().level).toBe(1);
   });
 
   it('dealDamage subtracts damage from target health', () => {
-    const attacker = new Character();
-    const target = new Character();
+    const target = aCharacter();
 
-    attacker.dealDamage(target, 100);
+    aCharacter().dealDamage(target, 100);
 
     expect(target.health).toBe(900);
   });
 
   it('lethal damage floors health at zero and kills the target', () => {
-    const attacker = new Character();
-    const target = new Character();
+    const target = aCharacter();
 
-    attacker.dealDamage(target, 1200);
+    aCharacter().dealDamage(target, 1200);
 
     expect(target.health).toBe(0);
     expect(target.isAlive).toBe(false);
   });
 
   it('rejects dealing damage to itself', () => {
-    const character = new Character();
+    const character = aCharacter();
 
     expect(() => character.dealDamage(character, 100)).toThrow('A character cannot damage itself');
     expect(character.health).toBe(1000);
   });
 
   it('healing an alive character below max increases its health', () => {
-    const attacker = new Character();
-    const character = new Character();
-    attacker.dealDamage(character, 100);
+    const character = aCharacterDamagedBy(100);
 
     character.heal(50);
 
@@ -53,9 +61,7 @@ describe('Character', () => {
   });
 
   it('healing cannot raise health above 1000', () => {
-    const attacker = new Character();
-    const character = new Character();
-    attacker.dealDamage(character, 100);
+    const character = aCharacterDamagedBy(100);
 
     character.heal(500);
 
@@ -63,7 +69,7 @@ describe('Character', () => {
   });
 
   it('a level 6+ character can heal up to 1500 health', () => {
-    const character = new Character(6);
+    const character = aCharacter(6);
 
     character.heal(600);
 
@@ -71,8 +77,8 @@ describe('Character', () => {
   });
 
   it('halves damage when the target is 5+ levels above the attacker', () => {
-    const attacker = new Character(1);
-    const target = new Character(6);
+    const attacker = aCharacter(1);
+    const target = aCharacter(6);
 
     attacker.dealDamage(target, 200);
 
@@ -80,9 +86,7 @@ describe('Character', () => {
   });
 
   it('rejects healing a dead character', () => {
-    const attacker = new Character();
-    const character = new Character();
-    attacker.dealDamage(character, 1000);
+    const character = aDeadCharacter();
 
     expect(() => character.heal(50)).toThrow('A dead character cannot heal');
     expect(character.health).toBe(0);
