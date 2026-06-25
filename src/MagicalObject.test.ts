@@ -9,4 +9,14 @@ describe('MagicalObject', () => {
     expect(object.health).toBe(500);
     expect(object.belongsTo('The Order')).toBe(false);
   });
+
+  it('a magical object is destroyed when its health reaches zero', () => {
+    const object = new MagicalObject(100);
+
+    expect(object.isDestroyed).toBe(false);
+    object.takeDamage(150);
+
+    expect(object.health).toBe(0);
+    expect(object.isDestroyed).toBe(true);
+  });
 });
