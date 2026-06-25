@@ -16,6 +16,13 @@ describe('Magical object combat', () => {
     expect(target.health).toBe(1000);
   });
 
+  it('a magical weapon cannot be used to heal', () => {
+    const character = aCharacter();
+    const magicalWeapon = new MagicalWeapon(10, 100);
+
+    expect(() => character.drawFrom(magicalWeapon)).toThrow('This object cannot heal');
+  });
+
   it('a magical weapon deals its fixed damage and loses one health', () => {
     const character = aCharacter();
     const target = aCharacter();
