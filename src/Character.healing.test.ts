@@ -6,6 +6,7 @@ import {
   aCharacterDamagedBy,
   aDeadCharacter,
 } from './character-builders.ts';
+import { MagicalObject } from './MagicalObject.ts';
 
 describe('Character healing', () => {
   it('healing an alive character below max increases its health', () => {
@@ -56,5 +57,13 @@ describe('Character healing', () => {
 
     expect(() => healer.heal(50, stranger)).toThrow('Cannot heal a non-ally');
     expect(stranger.health).toBe(900);
+  });
+
+  it('rejects healing a magical object', () => {
+    const healer = aCharacter();
+    const magicalObject = new MagicalObject(500);
+
+    expect(() => healer.heal(50, magicalObject)).toThrow('Cannot heal a magical object');
+    expect(magicalObject.health).toBe(500);
   });
 });

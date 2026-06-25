@@ -1,4 +1,6 @@
-export class MagicalObject {
+import type { Target } from './Target.ts';
+
+export class MagicalObject implements Target {
   private currentHealth: number;
 
   constructor(maxHealth: number) {

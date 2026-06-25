@@ -1,4 +1,6 @@
-export class Character {
+import type { Target } from './Target.ts';
+
+export class Character implements Target {
   private currentHealth = 1000;
   private readonly factions = new Set<string>();
 
@@ -57,7 +59,8 @@ export class Character {
     return damage;
   }
 
-  heal(amount: number, target: Character = this): void {
+  heal(amount: number, target: Target = this): void {
+    if (!(target instanceof Character)) throw new Error('Cannot heal a magical object');
     this.healCharacter(amount, target);
   }
 
