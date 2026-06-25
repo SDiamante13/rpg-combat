@@ -63,6 +63,22 @@ describe('Character progression', () => {
     expect(character.level).toBe(3);
   });
 
+  it('a gained level is never lost', () => {
+    const character = aCharacter();
+
+    character.join('The Order');
+    character.join('The Shadows');
+    character.join('The Watch');
+
+    expect(character.level).toBe(2);
+
+    character.leave('The Order');
+    character.leave('The Shadows');
+    character.leave('The Watch');
+
+    expect(character.level).toBe(2);
+  });
+
   it('a level 10 character cannot exceed level 10', () => {
     const character = aCharacterAtLevel(10);
 
