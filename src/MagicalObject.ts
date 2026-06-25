@@ -22,4 +22,8 @@ export class MagicalObject implements Target {
   belongsTo(_faction: string): boolean {
     return false;
   }
+
+  drawHealing(): number {
+    throw new Error('This object cannot heal');
+  }
 }

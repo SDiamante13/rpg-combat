@@ -6,6 +6,7 @@ import {
   aCharacterDamagedBy,
   aDeadCharacter,
 } from './character-builders.ts';
+import { HealingObject } from './HealingObject.ts';
 import { MagicalObject } from './MagicalObject.ts';
 
 describe('Character healing', () => {
@@ -69,7 +70,7 @@ describe('Character healing', () => {
 
   it("drawing from a healing object heals up to the object's remaining amount", () => {
     const character = aCharacterDamagedBy(600);
-    const healingObject = new MagicalObject(500);
+    const healingObject = new HealingObject(500);
 
     character.drawFrom(healingObject);
 

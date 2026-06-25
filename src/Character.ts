@@ -61,7 +61,7 @@ export class Character implements Target {
   }
 
   drawFrom(source: MagicalObject): void {
-    this.healCharacter(source.health, this);
+    this.healCharacter(source.drawHealing(), this);
   }
 
   heal(amount: number, target: Target = this): void {
