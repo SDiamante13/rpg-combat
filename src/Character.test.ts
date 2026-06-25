@@ -18,4 +18,14 @@ describe('Character', () => {
 
     expect(target.health).toBe(900);
   });
+
+  it('lethal damage floors health at zero and kills the target', () => {
+    const attacker = new Character();
+    const target = new Character();
+
+    attacker.dealDamage(target, 1200);
+
+    expect(target.health).toBe(0);
+    expect(target.isAlive).toBe(false);
+  });
 });
