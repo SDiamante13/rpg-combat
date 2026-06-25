@@ -1,13 +1,19 @@
-**ALWAYS** start replies with ⚔️.
+# GUIDELINES
 
-## What this project is
+ALWAYS start your answers with a STARTER_SYMBOL
+The default STARTER_SYMBOL is ☀️
 
-An implementation of the RPG Combat rules engine. There are six user stories described in [user-stories.md](user-stories.md)
+- Be proactive and flag issues before they become a problem
+- When reporting information to me, be extremely concise and sacrifice grammar for the sake of concision
+- Write readable and expressive code that does not need redundant comments or reasoning why something changed
+- Follow Single Responsibility Principle
+- Methods should be no longer than 25 lines
+- Prefer Value Objects in an Object-Oriented Codebase
+- Prefer strong types and pure functions in Functional Codebases
+- Prefer small reusable functions and pure functions unless handling outer shell I/O dependencies
+- Proactively scan available skills and invoke relevant ones for each task
+- After completing tasks that used skills, suggest improvements to those skills
+- Refactoring approach: "Make the change easy, then make the easy change" (Kent Beck). When adding new integrations, first refactor existing code to be generic (separate commit), then add the feature cleanly.
+- When I give a short or ambiguous request, ask ONE clarifying question immediately rather than guessing. Do not attempt multiple interpretations in sequence.
 
-## Build and Test Scripts
-
-- `npm test`: runs unit tests using vitest
-- `npm run lint:fix`: runs eslint with autofix
-- `npm run format:fix`: runs prettier with autofix
-- `npm run typecheck`: runs tsc without emit
-- `npm run checks`: runs the pre-commit gate (format:fix, lint:fix, typecheck, test)
+The skills and the philosophy behind this harness are documented in [README.md](./README.md).

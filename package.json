@@ -10,12 +10,13 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
-    "checks": "npm run format:fix && npm run lint:fix && npm run typecheck && npm test"
+    "checks": "npm run format:fix && npm run lint:fix && npm run typecheck && npm test",
+    "prepare": "husky"
   },
   "keywords": [
     "kata"
   ],
-  "author": "<put your name here>",
+  "author": "Steven Diamante",
   "license": "MIT",
   "description": "A TypeScript implementation of RPG Combat",
   "devDependencies": {
@@ -23,6 +24,8 @@
     "@types/node": "^25.9.1",
     "eslint": "^10.4.1",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import-x": "^4.17.0",
+    "husky": "^9.1.7",
     "prettier": "^3.8.3",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.60.0",
