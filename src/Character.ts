@@ -1,8 +1,15 @@
 import type { MagicalObject } from './MagicalObject.ts';
 import type { Target } from './Target.ts';
 
+const BASE_MAX_HEALTH = 1000;
+const HIGH_LEVEL_MAX_HEALTH = 1500;
+const HIGH_LEVEL = 6;
+const LEVEL_GAP_FOR_DAMAGE_MODIFIER = 5;
+const REDUCED_DAMAGE_FACTOR = 0.5;
+const INCREASED_DAMAGE_FACTOR = 1.5;
+
 export class Character implements Target {
-  private currentHealth = 1000;
+  private currentHealth = BASE_MAX_HEALTH;
   private readonly factions = new Set<string>();
 
   constructor(private readonly characterLevel = 1) {}
@@ -28,7 +35,7 @@ export class Character implements Target {
   }
 
   private get maxHealth(): number {
-    return this.level >= 6 ? 1500 : 1000;
+    return this.level >= HIGH_LEVEL ? HIGH_LEVEL_MAX_HEALTH : BASE_MAX_HEALTH;
   }
 
   get isAlive(): boolean {
@@ -55,11 +62,11 @@ export class Character implements Target {
   }
 
   private effectiveDamage(target: Character, damage: number): number {
-    if (target.level - this.level >= 5) {
-      return damage * 0.5;
+    if (target.level - this.level >= LEVEL_GAP_FOR_DAMAGE_MODIFIER) {
+      return damage * REDUCED_DAMAGE_FACTOR;
     }
-    if (this.level - target.level >= 5) {
-      return damage * 1.5;
+    if (this.level - target.level >= LEVEL_GAP_FOR_DAMAGE_MODIFIER) {
+      return damage * INCREASED_DAMAGE_FACTOR;
     }
     return damage;
   }
